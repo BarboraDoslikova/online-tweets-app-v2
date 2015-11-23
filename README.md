@@ -1,2 +1,3 @@
 # online-tweets-app-v2
-Launching
+
+The work is continuing in a new repository, see here: https://github.com/BarboraDoslikova/online-tweets-app-v9
