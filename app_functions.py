@@ -6,7 +6,10 @@ Created on Thu Nov 12 18:49:38 2015
 
 import simplejson
 import requests
+<<<<<<< HEAD
 import unicodedata
+=======
+>>>>>>> origin/master
 from requests_oauthlib import OAuth1
 
 
@@ -45,8 +48,12 @@ auth = OAuth1(
     secrets["access_token"],
     secrets["access_token_secret"]
 )
+<<<<<<< HEAD
 
    
+=======
+    
+>>>>>>> origin/master
 def tweet_generator(my_list):
     """Generates tweets in lowercase ascii with no weird characters.
     """
@@ -58,6 +65,7 @@ def tweet_generator(my_list):
                      data={"locations" : bounding_box})
     
     for line in stream.iter_lines():
+<<<<<<< HEAD
         try:
             if not line:  # Filter out keep-alive new lines
                 continue
@@ -73,6 +81,18 @@ def tweet_generator(my_list):
 """
 WORDS_TO_COUNT = ["weed", "stoned", "stoner", "stoners", "marihuana", "marijuana", "cannabis", "pot", "bong",
                  "#weed", "#stoned", "#stoner", "#stoners", "#marihuana", "#marijuana","#cannabis", "#pot", "#bong"]      
+=======
+        if not line:  # Filter out keep-alive new lines
+            continue
+        tweet = simplejson.loads(line)
+        if "text" in tweet:
+            yield tweet["text"].encode("ascii", "ignore").strip().lower()
+            
+            
+"""3. COUNT MATCHES
+"""
+WORDS_TO_COUNT = ["i", "me", "my", "you", "us", "is", "are", "so", "stoned", "marihuana", "stoned", "pot", "#weed", "#marihuana", "#stoned", "#pot"]      
+>>>>>>> origin/master
    
 def tokenize(list):
     """Takes a list of sentences/tweets/strings and
@@ -109,3 +129,8 @@ def count_matches(list):
             if (word == token):
                 count = count + 1
     return count
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
