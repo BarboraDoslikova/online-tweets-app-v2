@@ -51,16 +51,8 @@ def graph():
     def generate_x_tweets(my_list):
         """ Generates a desired number of tweets.
         I.e. Runs the tweet generator x-times.
-        """ 
-<<<<<<< HEAD
+        """
         NUMBER_OF_TWEETS = 10 
-=======
-<<<<<<< HEAD
-        NUMBER_OF_TWEETS = 10 
-=======
-        NUMBER_OF_TWEETS = 3 
->>>>>>> origin/master
->>>>>>> origin/master
         count = NUMBER_OF_TWEETS
         while count > 0:
            generate_1_tweet(my_list)
@@ -95,25 +87,11 @@ def graph():
     """
     script, div = components(plot, CDN)
     g = all_tweets
-<<<<<<< HEAD
-    
+
     pre_choice = onlinetweetsappv2.vars["regions_selected"]
     pr_choice = [str(x) for x in pre_choice]
-    choice = " & ".join(str(x) for x in pr_choice)    
-    
-=======
-<<<<<<< HEAD
-    
-    pre_choice = onlinetweetsappv2.vars["regions_selected"]
-    pr_choice = [str(x) for x in pre_choice]
-    choice = " & ".join(str(x) for x in pr_choice)    
-    
-=======
-    pre_choice = onlinetweetsappv2.vars["regions_selected"]
-    choice = [str(x) for x in pre_choice]
-    
->>>>>>> origin/master
->>>>>>> origin/master
+    choice = " & ".join(str(x) for x in pr_choice) 
+
     return render_template("graph.html", graph=g, choice=choice, script=script, div=div)
 
 if __name__ == "__main__":
