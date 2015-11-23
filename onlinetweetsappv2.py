@@ -49,7 +49,7 @@ def graph():
             return all_tweets.append(tweet)        
         
     def generate_x_tweets(my_list):
-        """ Generates a desired number of tweets.
+        """Generates a desired number of tweets.
         I.e. Runs the tweet generator x-times.
         """
         NUMBER_OF_TWEETS = 10 
@@ -87,11 +87,11 @@ def graph():
     """
     script, div = components(plot, CDN)
     g = all_tweets
-
+    
     pre_choice = onlinetweetsappv2.vars["regions_selected"]
     pr_choice = [str(x) for x in pre_choice]
-    choice = " & ".join(str(x) for x in pr_choice) 
-
+    choice = " & ".join(str(x) for x in pr_choice)    
+    
     return render_template("graph.html", graph=g, choice=choice, script=script, div=div)
 
 if __name__ == "__main__":
