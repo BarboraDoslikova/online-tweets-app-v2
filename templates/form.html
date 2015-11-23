@@ -10,18 +10,21 @@
 
     <div class=metanav>
 
-        <h4>
-        <form id='answerform' method='post' action='main' >
-        <p>Region:<br/>
-        <input type='radio' name='answer_from_layout' value={{ans1}} /> {{ans1}} <br/>
-        <input type='radio' name='answer_from_layout' value={{ans2}} /> {{ans2}} <br/>
-        </p>
+      <h4>
+        
+        <form method='post' action='main' >
+          <p>Region:<br/>          
+              <input type="checkbox" name='region' value={{ans1}}> {{ans1}} <br/>
+              <input type="checkbox" name='region' value={{ans2}}> {{ans2}} <br/>
+              <input type="checkbox" name='region' value={{ans3}}> {{ans3}} <br/>
+          </p>
 
-        <p>
-        <input type='submit' value='Submit' />
-        </p>
+          <p>
+              <input type='submit' value='Submit' />
+          </p>
         </form>
-        </h4>
+        
+      </h4>
 
     </div>
     </div>
